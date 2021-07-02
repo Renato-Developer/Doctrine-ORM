@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'ce0798f07de734ff3f88acc7fbab78a9ba3ae378',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'ce0798f07de734ff3f88acc7fbab78a9ba3ae378',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -118,6 +118,15 @@
             'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
             'dev_requirement' => false,
         ),
+        'doctrine/migrations' => array(
+            'pretty_version' => '3.1.4',
+            'version' => '3.1.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../doctrine/migrations',
+            'aliases' => array(),
+            'reference' => '207210c57f6c15835e8d6228075cd235bd061efc',
+            'dev_requirement' => false,
+        ),
         'doctrine/orm' => array(
             'pretty_version' => '2.9.3',
             'version' => '2.9.3.0',
@@ -136,10 +145,34 @@
             'reference' => 'd138f3ab5f761055cab1054070377cfd3222e368',
             'dev_requirement' => false,
         ),
+        'friendsofphp/proxy-manager-lts' => array(
+            'pretty_version' => 'v1.0.5',
+            'version' => '1.0.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../friendsofphp/proxy-manager-lts',
+            'aliases' => array(),
+            'reference' => '006aa5d32f887a4db4353b13b5b5095613e0611f',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-code' => array(
+            'pretty_version' => '4.4.0',
+            'version' => '4.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-code',
+            'aliases' => array(),
+            'reference' => '2b0bb59ade31a045fd3ff0097dc558bb896f6596',
+            'dev_requirement' => false,
+        ),
         'ocramius/package-versions' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '1.11.99',
+            ),
+        ),
+        'ocramius/proxy-manager' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.1',
             ),
         ),
         'psr/cache' => array(
@@ -229,6 +262,15 @@
             'reference' => '5f38c8804a9e97d23e0c8d63341088cd8a22d627',
             'dev_requirement' => false,
         ),
+        'symfony/filesystem' => array(
+            'pretty_version' => 'v5.3.3',
+            'version' => '5.3.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/filesystem',
+            'aliases' => array(),
+            'reference' => '19b71c8f313b411172dd5f470fd61f24466d79a9',
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-ctype' => array(
             'pretty_version' => 'v1.23.0',
             'version' => '1.23.0.0',
@@ -290,6 +332,15 @@
             'install_path' => __DIR__ . '/../symfony/service-contracts',
             'aliases' => array(),
             'reference' => 'f040a30e04b57fbcc9c6cbcf4dbaa96bd318b9bb',
+            'dev_requirement' => false,
+        ),
+        'symfony/stopwatch' => array(
+            'pretty_version' => 'v5.3.0',
+            'version' => '5.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/stopwatch',
+            'aliases' => array(),
+            'reference' => '313d02f59d6543311865007e5ff4ace05b35ee65',
             'dev_requirement' => false,
         ),
         'symfony/string' => array(
