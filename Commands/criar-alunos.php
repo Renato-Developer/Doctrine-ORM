@@ -14,6 +14,7 @@ $aluno->setNome($argv[1]);
 
 for ($i = 2; $i < $argc; $i++) {
     $numeroTelefone = $argv[$i];
+
     $telefone = new Telefone();
 
     $entityManager->persist($telefone);

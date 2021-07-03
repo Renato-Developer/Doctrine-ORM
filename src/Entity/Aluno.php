@@ -26,7 +26,7 @@ class Aluno
 
     /**
      * @var ArrayCollection
-     * @OneToMany(targetEntity="Telefone" , mappedBy="Aluno", cascade={"persist"}))
+     * @OneToMany(targetEntity="Telefone" , mappedBy="aluno", cascade={"remove", "persist"}))
      */
     private $telefones;
 
