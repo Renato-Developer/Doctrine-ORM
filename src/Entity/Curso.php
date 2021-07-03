@@ -27,10 +27,9 @@ class Curso
      */
     private $alunos;
 
-    public function __construct(string $nome)
+    public function __construct()
     {
         $this->alunos = new ArrayCollection();
-        $this->nome = $nome;
     }
 
     public function getId()
@@ -41,6 +40,11 @@ class Curso
     public function getNome(): string
     {
         return $this->nome;
+    }
+
+    public function setNome(string $nome)
+    {
+        $this->nome = $nome;
     }
 
     public function addAluno(Aluno $aluno): self
