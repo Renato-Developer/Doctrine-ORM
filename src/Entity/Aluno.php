@@ -82,4 +82,9 @@ class Aluno
         return $this;
     }
 
+    public function getCursos(): Collection
+    {
+        return $this->cursos;
+    }
+
 }
