@@ -9,17 +9,9 @@ require_once "../vendor/autoload.php";
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
-$alunoRepository = $entityManager->getRepository(Aluno::class);
-
-/*
-public function findBy(
-    array $criteria,
-    ?array $orderBy = null,
-    ?int $limit = null,
-    ?int $offset = null
-)
-*/
-$alunos = $alunoRepository->findBy(['nome' => 'RenatoAugusto'], ['id' => 'desc']);
+$dql = "SELECT aluno FROM Alura\\Doctrine\\Entity\\Aluno aluno WHERE aluno.id = 1 AND aluno.nome = 'RenatoAugusto'";
+$query = $entityManager->createQuery($dql);
+$alunos = $query->getResult();
 
 /**
  * @var Aluno[] $alunos
