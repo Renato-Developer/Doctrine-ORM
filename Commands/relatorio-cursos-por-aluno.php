@@ -8,6 +8,8 @@ use Doctrine\DBAL\Logging\DebugStack;
 
 require_once "../vendor/autoload.php";
 
+/* DOCTRINE - ENTIDADES NO MODO LAZY - PERFORMANCE HORRÍVEL NESTE CENÁRIO */
+
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 

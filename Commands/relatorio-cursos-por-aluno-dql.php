@@ -11,14 +11,12 @@ require_once "../vendor/autoload.php";
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
-$debugStack = new DebugStack();
-$entityManager->getConfiguration()->setSQLLogger($debugStack);
+$stack = new DebugStack();
+$entityManager->getConnection()->getConfiguration()->setSQLLogger($stack);
 
+$alunoRepository = $entityManager->getRepository(Aluno::class);
 
-$classeAluno = Aluno::class;
-$dql = "SELECT aluno, telefones, cursos FROM $classeAluno aluno JOIN aluno.telefones telefones JOIN aluno.cursos cursos ";
-$query = $entityManager->createQuery($dql);
-$alunos = $query->getResult();
+$alunos = $alunoRepository->buscarAlunosComCursoETelefone();
 
 /**@var Aluno[] $alunos*/
 foreach ($alunos as $aluno) {
@@ -42,4 +40,4 @@ foreach ($alunos as $aluno) {
     echo "\n\n\n";
 }
 
-print_r($debugStack);
+print_r($stack);

@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @Entity
+ * @Entity(repositoryClass="Alura\Doctrine\Repository\AlunoRepositoryQueryBuilderExample")
  */
 
 class Aluno
@@ -26,7 +26,7 @@ class Aluno
 
     /**
      * @var ArrayCollection
-     * @OneToMany(targetEntity="Telefone" , mappedBy="aluno", cascade={"remove", "persist"}, fetch="EAGER"))
+     * @OneToMany(targetEntity="Telefone" , mappedBy="aluno", cascade={"remove", "persist"}, fetch="LAZY"))
      */
     private $telefones;
 

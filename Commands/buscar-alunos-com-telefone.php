@@ -9,14 +9,20 @@ require_once "../vendor/autoload.php";
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
-$dql = "SELECT aluno FROM Alura\\Doctrine\\Entity\\Aluno aluno WHERE aluno.id = 1 AND aluno.nome = 'RenatoAugusto'";
+/*
+$dql = "SELECT aluno FROM Alura\\Doctrine\\Entity\\Aluno aluno";
 $query = $entityManager->createQuery($dql);
 $alunos = $query->getResult();
+*/
+
+$alunoRepository = $entityManager->getRepository(Aluno::class);
+
+$alunosComTelefone = $alunoRepository->buscarAlunosComTelefone();
 
 /**
- * @var Aluno[] $alunos
+ * @var Aluno[] $alunosComTelefone
  */
-foreach ($alunos as $aluno) {
+foreach ($alunosComTelefone as $aluno) {
 
     $telefones = $aluno->getTelefones()->map(function (Telefone $telefone) {
         return $telefone->getNumero();
@@ -26,4 +32,3 @@ foreach ($alunos as $aluno) {
     echo "NOME: {$aluno->getNome()}\n\n";
     echo "\n\nTELEFONE:" . implode(', ', $telefones);
 }
-
