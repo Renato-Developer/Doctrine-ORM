@@ -36,7 +36,7 @@ duplicação de código desnecessária.
 <p>
 Saber Mais:
 
-* [Website](http://www.doctrine-project.org)
+* [Doctrine](http://www.doctrine-project.org)
 * [Documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/index.html)
 
 </p>
@@ -45,7 +45,7 @@ Saber Mais:
 
    ```
    - Clone this repository:
-   $ git clone https://github.com/Renato-Developer/Design-Patterns-PHP.git
+   $ git clone https://github.com/Renato-Developer/Doctrine-ORM.git
 
    - Check the directory:
    $ cd /var/www/html/<NameOfProject>
